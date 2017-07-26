@@ -1,4 +1,7 @@
-data/*
+data/DIYABC/*
+data/aDNA.ods
+data/aDNA.gen
+results/*
 .Rproj.user/
 ABCQuinoa.Rproj
 
