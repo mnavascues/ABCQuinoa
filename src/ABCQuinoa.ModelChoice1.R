@@ -7,7 +7,7 @@ model4 <- "Model_3pop_topo2"
 model5 <- "Model_3pop_topo3"
 model6 <- "Model_Admix1_topo1"
 model7 <- "Model_Admix1_topo2"
-model8 <- "Model-Admix1_topo3"
+model8 <- "Model_Admix1_topo3"
 
 load(file=paste0("results/reftable_",model1,".RData"))
 reftable_model1 <- reftable
@@ -26,20 +26,21 @@ reftable_model7 <- reftable
 load(file=paste0("results/reftable_",model8,".RData"))
 reftable_model8 <- reftable
 
+sims_per_scenario <- 9999
 
-reftable_stats <- rbind(reftable_model1[1:9999,t(stats_names)],
-                        reftable_model2[1:9999,t(stats_names)],
-                        reftable_model3[1:3333,t(stats_names)],
-                        reftable_model4[1:3333,t(stats_names)],
-                        reftable_model5[1:3333,t(stats_names)],
-                        reftable_model6[1:3333,t(stats_names)],
-                        reftable_model7[1:3333,t(stats_names)],
-                        reftable_model8[1:3333,t(stats_names)])
+reftable_stats <- rbind(reftable_model1[1:sims_per_scenario,t(stats_names)],
+                        reftable_model2[1:sims_per_scenario,t(stats_names)],
+                        reftable_model3[1:round(sims_per_scenario/3),t(stats_names)],
+                        reftable_model4[1:round(sims_per_scenario/3),t(stats_names)],
+                        reftable_model5[1:round(sims_per_scenario/3),t(stats_names)],
+                        reftable_model6[1:round(sims_per_scenario/3),t(stats_names)],
+                        reftable_model7[1:round(sims_per_scenario/3),t(stats_names)],
+                        reftable_model8[1:round(sims_per_scenario/3),t(stats_names)])
 
-modelindex <- as.factor(c(rep.int(1,9999),
-                          rep.int(2,9999),
-                          rep.int(3,9999),
-                          rep.int(4,9999)))
+modelindex <- as.factor(c(rep.int(1,sims_per_scenario),
+                          rep.int(2,sims_per_scenario),
+                          rep.int(3,sims_per_scenario),
+                          rep.int(4,sims_per_scenario)))
 
 statsobs <- read.table("results/statobs.txt",header=T)
 
@@ -76,5 +77,5 @@ model_selection_result <- predict(object         = model.rf,
 
 save(model.rf,
      model_selection_result,
-     file="ModelChoice1.RData")
+     file="results/ModelChoice1.RData")
 
