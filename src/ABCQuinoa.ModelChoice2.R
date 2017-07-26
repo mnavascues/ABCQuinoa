@@ -11,7 +11,7 @@ reftable_model2 <- reftable
 load(file=paste0("results/reftable_",model3,".RData"))
 reftable_model3 <- reftable
 
-sims_per_scenario <- 10000
+sims_per_scenario <- 100000
 
 reftable_stats <- rbind(reftable_model1[1:sims_per_scenario,t(stats_names)],
                         reftable_model2[1:sims_per_scenario,t(stats_names)],
