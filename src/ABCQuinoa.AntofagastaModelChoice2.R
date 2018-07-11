@@ -1,8 +1,9 @@
 library("abcrf")    # for ABC with random forests
 
-model1 <- "Model_Admix1_topo1"
-model2 <- "Model_Admix1_topo2"
-model3 <- "Model_Admix1_topo3"
+
+model1 <- "3populations"
+model2 <- "Admixture2events"
+model3 <- "Wild2samples"
 
 load(file=paste0("results/reftable_",model1,".RData"))
 reftable_model1 <- reftable
@@ -23,14 +24,14 @@ modelindex <- as.factor(c(rep.int(1,sims_per_scenario),
 
 statsobs <- read.table("results/statobs.txt",header=T)
 
-rm(reftable_model1,reftable_model2,reftable_model3)
+rm(reftable_model1,reftable_model2,reftable_model3,reftable_model4)
 gc()
 
 dim(reftable_stats)
 
 model.rf <- abcrf(modelindex~.,
                   data.frame(modelindex,reftable_stats),
-                  ntree=2000,
+                  ntree=1000,
                   paral=T)
 
 model.rf$prior.err
@@ -38,7 +39,6 @@ model.rf$prior.err
 plot(model.rf,
      data.frame(modelindex,reftable_stats),
      obs=statsobs)
-
 
 err.abcrf(model.rf,
           training=data.frame(modelindex,reftable_stats),
@@ -53,7 +53,9 @@ model_selection_result <- predict(object         = model.rf,
 (model_selection_result)
 
 
+
+
 save(model.rf,
      model_selection_result,
-     file="results/ModelChoice2.RData")
-
+     file="results/AntofagastaModelChoice2.RData")
+load(file="results/AntofagastaModelChoice2.RData")
