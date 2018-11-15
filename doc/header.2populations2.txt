@@ -1,0 +1,88 @@
+Antofagasta.gen
+16 parameters and 200 summary statistics
+
+1 scenarios: 14 
+scenario 1 [1.0] (13)
+Na0 Nb0
+-56 sample 1
+ts2 sample 1
+ts2 varNe 1 Na1
+ts3+1 sample 1
+ts3 sample 1
+ts3 varNe 1 Na2
+ts4+1 sample 2
+ts4 sample 2
+ts5 sample 2
+ts5 varNe 2 Nb1
+td1 merge 1 2
+td1 varNe 1 NA0
+td2 varNe 1 NAW0
+
+historical parameters priors (13,5)
+Na0 N LU[2,1000000,0.0,0.0]
+Nb0 N LU[2,1000000,0.0,0.0]
+ts2 T NO[1,10000000,690,50]
+Na1 N LU[2,1000000,0.0,0.0]
+ts3 T NO[1,10000000,796,24]
+Na2 N LU[2,1000000,0.0,0.0]
+ts4 T NO[1,10000000,1364,20]
+ts5 T NO[1,10000000,1796,23]
+Nb1 N LU[2,1000000,0.0,0.0]
+td1 T UN[1796,7000,0.0,0.0]
+NA0 N LU[2,1000000,0.0,0.0]
+td2 T UN[5000,7000,0.0,0.0]
+NAW0 N LU[2,1000000,0.0,0.0]
+ts3>ts2
+ts4>ts3
+ts5>ts4
+td1>ts5
+td2>td1
+DRAW UNTIL
+
+loci description (20)
+QCA057 <A> [M] G1 2 100
+KGA003 <A> [M] G1 2 100
+KGA020 <A> [M] G1 2 100
+QAAT011 <A> [M] G1 2 100
+QAAT022 <A> [M] G1 2 100
+QAAT024 <A> [M] G1 2 100
+QAAT027 <A> [M] G1 2 100
+QAAT050b <A> [M] G1 2 100
+QAAT062 <A> [M] G1 2 100
+QAAT071 <A> [M] G1 2 100
+QAAT087 <A> [M] G1 2 100
+QAAT097 <A> [M] G1 2 100
+QAAT112 <A> [M] G1 2 100
+QAAT026 <A> [M] G1 2 100
+QAAT078 <A> [M] G1 2 100
+QATG064 <A> [M] G1 2 100
+QCA037 <A> [M] G1 2 100
+QCA053 <A> [M] G1 2 100
+QCA024 <A> [M] G1 2 100
+QGA003 <A> [M] G1 2 100
+
+group priors (1)
+group G1 [M]
+MEANMU LU[1.00E-005,1.00E-2,0.0005,2]
+GAMMU GA[1.00E-005,1.00E-002,Mean_u,2]
+MEANP UN[0,1,0.22,2]
+GAMP GA[0,1,Mean_P,2]
+MEANSNI LU[1.00E-009,1.00E-005,1.00E-007,2]
+GAMSNI GA[1.00E-009,1.00E-005,Mean_u_SNI,2]
+
+group summary statistics (200)
+group G1 [M] (200)
+NAL 1 2 3 4 5 6 7 
+HET 1 2 3 4 5 6 7 
+VAR 1 2 3 4 5 6 7 
+MGW 1 2 3 4 5 6 7 
+N2P 1&2 1&3 1&4 1&5 1&6 1&7 2&3 2&4 2&5 2&6 2&7 3&4 3&5 3&6 3&7 4&5 4&6 4&7 5&6 5&7 6&7 
+H2P 1&2 1&3 1&4 1&5 1&6 1&7 2&3 2&4 2&5 2&6 2&7 3&4 3&5 3&6 3&7 4&5 4&6 4&7 5&6 5&7 6&7 
+V2P 1&2 1&3 1&4 1&5 1&6 1&7 2&3 2&4 2&5 2&6 2&7 3&4 3&5 3&6 3&7 4&5 4&6 4&7 5&6 5&7 6&7 
+FST 1&2 1&3 1&4 1&5 1&6 1&7 2&3 2&4 2&5 2&6 2&7 3&4 3&5 3&6 3&7 4&5 4&6 4&7 5&6 5&7 6&7 
+LIK 1&2 1&3 1&4 1&5 1&6 1&7 2&1 2&3 2&4 2&5 2&6 2&7 3&1 3&2 3&4 3&5 3&6 3&7 4&1 4&2 4&3 4&5 4&6 4&7 5&1 5&2 5&3 5&4 5&6 5&7 6&1 6&2 6&3 6&4 6&5 6&7 7&1 7&2 7&3 7&4 7&5 7&6 
+DAS 1&2 1&3 1&4 1&5 1&6 1&7 2&3 2&4 2&5 2&6 2&7 3&4 3&5 3&6 3&7 4&5 4&6 4&7 5&6 5&7 6&7 
+DM2 1&2 1&3 1&4 1&5 1&6 1&7 2&3 2&4 2&5 2&6 2&7 3&4 3&5 3&6 3&7 4&5 4&6 4&7 5&6 5&7 6&7 
+AML 4&3&6 4&2&6 6&5&4 6&7&4 
+
+scenario     Na0           Nb0           ts2           Na1           ts3           Na2           ts4           ts5           Nb1           td1           NA0           td2           NAW0         µmic_1        pmic_1       snimic_1      NAL_1_1       NAL_1_2       NAL_1_3       NAL_1_4       NAL_1_5       NAL_1_6       NAL_1_7       HET_1_1       HET_1_2       HET_1_3       HET_1_4       HET_1_5       HET_1_6       HET_1_7       VAR_1_1       VAR_1_2       VAR_1_3       VAR_1_4       VAR_1_5       VAR_1_6       VAR_1_7       MGW_1_1       MGW_1_2       MGW_1_3       MGW_1_4       MGW_1_5       MGW_1_6       MGW_1_7      N2P_1_1&2     N2P_1_1&3     N2P_1_1&4     N2P_1_1&5     N2P_1_1&6     N2P_1_1&7     N2P_1_2&3     N2P_1_2&4     N2P_1_2&5     N2P_1_2&6     N2P_1_2&7     N2P_1_3&4     N2P_1_3&5     N2P_1_3&6     N2P_1_3&7     N2P_1_4&5     N2P_1_4&6     N2P_1_4&7     N2P_1_5&6     N2P_1_5&7     N2P_1_6&7     H2P_1_1&2     H2P_1_1&3     H2P_1_1&4     H2P_1_1&5     H2P_1_1&6     H2P_1_1&7     H2P_1_2&3     H2P_1_2&4     H2P_1_2&5     H2P_1_2&6     H2P_1_2&7     H2P_1_3&4     H2P_1_3&5     H2P_1_3&6     H2P_1_3&7     H2P_1_4&5     H2P_1_4&6     H2P_1_4&7     H2P_1_5&6     H2P_1_5&7     H2P_1_6&7     V2P_1_1&2     V2P_1_1&3     V2P_1_1&4     V2P_1_1&5     V2P_1_1&6     V2P_1_1&7     V2P_1_2&3     V2P_1_2&4     V2P_1_2&5     V2P_1_2&6     V2P_1_2&7     V2P_1_3&4     V2P_1_3&5     V2P_1_3&6     V2P_1_3&7     V2P_1_4&5     V2P_1_4&6     V2P_1_4&7     V2P_1_5&6     V2P_1_5&7     V2P_1_6&7     FST_1_1&2     FST_1_1&3     FST_1_1&4     FST_1_1&5     FST_1_1&6     FST_1_1&7     FST_1_2&3     FST_1_2&4     FST_1_2&5     FST_1_2&6     FST_1_2&7     FST_1_3&4     FST_1_3&5     FST_1_3&6     FST_1_3&7     FST_1_4&5     FST_1_4&6     FST_1_4&7     FST_1_5&6     FST_1_5&7     FST_1_6&7     LIK_1_1&2     LIK_1_1&3     LIK_1_1&4     LIK_1_1&5     LIK_1_1&6     LIK_1_1&7     LIK_1_2&1     LIK_1_2&3     LIK_1_2&4     LIK_1_2&5     LIK_1_2&6     LIK_1_2&7     LIK_1_3&1     LIK_1_3&2     LIK_1_3&4     LIK_1_3&5     LIK_1_3&6     LIK_1_3&7     LIK_1_4&1     LIK_1_4&2     LIK_1_4&3     LIK_1_4&5     LIK_1_4&6     LIK_1_4&7     LIK_1_5&1     LIK_1_5&2     LIK_1_5&3     LIK_1_5&4     LIK_1_5&6     LIK_1_5&7     LIK_1_6&1     LIK_1_6&2     LIK_1_6&3     LIK_1_6&4     LIK_1_6&5     LIK_1_6&7     LIK_1_7&1     LIK_1_7&2     LIK_1_7&3     LIK_1_7&4     LIK_1_7&5     LIK_1_7&6     DAS_1_1&2     DAS_1_1&3     DAS_1_1&4     DAS_1_1&5     DAS_1_1&6     DAS_1_1&7     DAS_1_2&3     DAS_1_2&4     DAS_1_2&5     DAS_1_2&6     DAS_1_2&7     DAS_1_3&4     DAS_1_3&5     DAS_1_3&6     DAS_1_3&7     DAS_1_4&5     DAS_1_4&6     DAS_1_4&7     DAS_1_5&6     DAS_1_5&7     DAS_1_6&7     DM2_1_1&2     DM2_1_1&3     DM2_1_1&4     DM2_1_1&5     DM2_1_1&6     DM2_1_1&7     DM2_1_2&3     DM2_1_2&4     DM2_1_2&5     DM2_1_2&6     DM2_1_2&7     DM2_1_3&4     DM2_1_3&5     DM2_1_3&6     DM2_1_3&7     DM2_1_4&5     DM2_1_4&6     DM2_1_4&7     DM2_1_5&6     DM2_1_5&7     DM2_1_6&7    AML_1_4&3&6   AML_1_4&2&6   AML_1_6&5&4   AML_1_6&7&4  
